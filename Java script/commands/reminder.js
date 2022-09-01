@@ -1,5 +1,4 @@
 module.exports = async (bot,message,args,argsF) => {
-     
     if (!args[0]) return message.reply("Укажите время напоминания");
     const result = args[0].match(/^(\d|\d\d)(h|s|m)$/i);
     if (!args[0]) return message.reply("Укажите время напоминания");
@@ -7,10 +6,10 @@ module.exports = async (bot,message,args,argsF) => {
     if(!args[1]) return message.reply("Укажите напоминание");
     setTimeout(() => {
         message.author.send({
-            content: "Вам нужно было напомнить "+argsF.slice(1).join(" ")
+            content: "Вам нужно было напомнить:\n\n "+argsF.slice(1).join(" ")
         }).catch(err=>console.error(err))
     }, time);
     return message.reply("Ожидайте!");
 
 };
-module.exports.names = ["Напоминание", "напоминание"]; //У неё есть название
+module.exports.names = ["Напоминание", "напоминание"];
