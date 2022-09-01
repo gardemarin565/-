@@ -3,8 +3,6 @@
     "cfg": {
         "intents": [
             "MessageContent",
-
-            
             "Guilds",
             "GuildBans",
             "GuildEmojisAndStickers",
