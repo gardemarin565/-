@@ -13,4 +13,4 @@ module.exports = async (bot,message,args,argsF) => {
     await member.roles.add(role);
     return channel.send("Роль выдана")    
 };
-module.exports.names = ["Кастом"]; //У неё есть название
+module.exports.names = ["Кастом"];
