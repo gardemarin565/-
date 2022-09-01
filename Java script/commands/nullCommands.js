@@ -7,6 +7,6 @@ module.exports = async (bot,message,args,argsF) => {
 module.exports.names = ["пинг"];
 module.exports.interaction = {
     name: 'пинг',
-    description: 'Просто проверочная команда, ничего больше',
+    description: 'Ответить на команду текстом "Понг!"',
     defaultPermission: true
 };
