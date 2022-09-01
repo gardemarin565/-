@@ -13,4 +13,4 @@ module.exports = async (bot,message,args,argsF) => {
         }]
     })
 };
-module.exports.names = ["баннер", "Баннер"]; //У неё есть название
+module.exports.names = ["баннер", "Баннер"];
