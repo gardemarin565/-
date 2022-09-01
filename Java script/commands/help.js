@@ -57,4 +57,4 @@ module.exports = async (bot,message,args,argsF) => {
         })
     }
 };
-module.exports.names = ["Команды", "команды"]; //У неё есть название
+module.exports.names = ["Команды", "команды"];
