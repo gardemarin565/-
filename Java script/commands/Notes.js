@@ -10,7 +10,7 @@ module.exports = async (bot,message,args,argsF) => {
         }
         return message.reply ({
             embeds: [{
-                title: "Записная книжка",
+                title: "Заметки",
                 description
             }]
         });
@@ -21,7 +21,7 @@ module.exports = async (bot,message,args,argsF) => {
         memUser.notes.splice(args[1]-1,1);
         return message.reply ({
             embeds: [{
-                title: "Записная книжка",
+                title: "Заметки",
                 description: "Запись удалена",
                 color: "#BBC3A5"
             }]
@@ -32,10 +32,10 @@ module.exports = async (bot,message,args,argsF) => {
     memUser.notes.push(argsF.join(" "));
     return message.reply ({
         embeds: [{
-            title: "Записная книжка",
+            title: "Заметки",
             description: "Запись добавлена"
         }]
     });
 
 };
-module.exports.names = ["заметка", "Заметка"]; //У неё есть название
+module.exports.names = ["заметка", "Заметка"];
