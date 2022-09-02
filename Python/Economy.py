@@ -63,7 +63,7 @@ async def work(ctx):
     await ctx.send(f'{ctx.author.mention}, поздравляю, вы получили зарплату в размере {amount} <a:Krut:1009827464836554853>!')
 
 @client.command(aliases = ['карта', 'Карта'])
-async def bank(ctx, arg1, *args):
+async def bank(ctx, arg1):
     BankAmount = arg1
 
     with open ('Economy.json', 'r') as file:
