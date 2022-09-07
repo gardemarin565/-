@@ -7,8 +7,8 @@ from config import settings
 
 bot = commands.Bot(command_prefix = '*', intents = discord.Intents.all())
 
-Links = ['.com', '.ru', '.рф', '.ua', '.org', ".net", 'http', 'https', '://', '.shop', ".gg", ".gift", ".me", ".io"]
-BadWords = ['хуй', 'блядь', 'блять', 'хуе', 'пидар', 'пидор', 'ебл', 'Муд']
+Links = [Тут ссылки]
+BadWords = [Тут маты]
 
 @bot.event
 async def on_ready():
