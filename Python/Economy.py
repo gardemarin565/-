@@ -69,10 +69,13 @@ async def bank(ctx, arg1):
     with open ('Economy.json', 'r') as file:
         data = json.load(file)
         file.close()
-
-    data[str(ctx.author.id)]["Cash"] -= BankAmount
-    data[str(ctx.author.id)]["Bank"] += BankAmount
-
-    await ctx.send(f'{ctx.author.mention}, {BankAmount} <a:Krut:1009827464836554853> успешно переведены на карту!')
+    if BankAmount <= data[str(ctx.author.id)]["Cash"]:
+        data[str(ctx.author.id)]["Cash"] -= BankAmount
+        data[str(ctx.author.id)]["Bank"] += BankAmount
+        await ctx.send(f'{ctx.author.mention}, {BankAmount} <a:Krut:1009827464836554853> успешно переведены на карту!')
+    elif BankAmount > data[str(ctx.author.id)]["Cash"]:
+        await ctx.send(f'{ctx.author.mention}, извините, но вы указали сумму, которой вам недостаточно для перевода на карту, нажмите на кнопку ниже, если хотите перевести все свои средства на карту')
+    else:
+        await ctx.send(f'{ctx.author.mention}, пожалуйста, укажите **сумму** для перевода')
 
 client.run(settings['token'])
