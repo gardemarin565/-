@@ -79,4 +79,3 @@ async def bank(ctx, arg1):
         await ctx.send(f'{ctx.author.mention}, пожалуйста, укажите **сумму** для перевода')
 
 client.run(settings['token'])
-#k;djhrtlkdihjtpld;khjimdl;khj
