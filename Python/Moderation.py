@@ -28,8 +28,7 @@ async def on_ready():
                 with open('moderation.json', 'w') as file:
                     data[str(member.id)] = {
                         "Warns": 0,
-                        "Caps": 0,
-                        "Money": 0
+                        "Caps": 0
                     }
 
                     json.dump(data, file, indent = 4)
