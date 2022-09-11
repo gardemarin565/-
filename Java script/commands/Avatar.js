@@ -7,7 +7,7 @@ module.exports = async (bot,message,args,argsF) => {
         embeds: [{
             title: "Аватарка "+user.displayName,
             color: user.displayColor,
-            description: `Различные форматы аватарки: [jpg](${user.displayAvatarURL({option:"jpg",size: 512})}), [jpeg](${user.displayAvatarURL({option:"jpeg",size: 512})}), [png](${user.displayAvatarURL({option:"png",size: 512})}), [gif](${user.displayAvatarURL({option:"gif",size: 512})})`,
+            description: `Различные форматы аватарки: [jpg](${user.displayAvatarURL({extension:"jpg",size: 512})}), [jpeg](${user.displayAvatarURL({extension:"jpeg",size: 512})}), [png](${user.displayAvatarURL({extension:"png",size: 512})}), [gif](${user.displayAvatarURL({extension:"gif",size: 512})})`,
             image: {
                 url: avatarURL
             }
