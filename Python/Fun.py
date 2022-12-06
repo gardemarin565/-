@@ -52,4 +52,8 @@ async def fox(ctx):
     embed.set_image(url = json_data['link']) 
     await ctx.send(embed = embed)
 
+@client.command(name = 'КНБ')
+async def RPS(ctx):
+    
+
 client.run(settings['token'])
